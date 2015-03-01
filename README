@@ -14,6 +14,16 @@ simulator only models the back-end and can be attached to any
 front-end CPU model. In this code base, we have a simple
 trace-based front-end Out-of-Order CPU model.
 
+Please cite the following work if you use this simulator as part
+of your evaluation in your research/development. This simulator is
+the basis of evaluation in the following works.
+
+Vivek Seshadri, Onur Mutlu, Michael A. Kozuch, and Todd C. Mowry,
+"The Evicted-Address Filter: A Unified Mechanism to Address Both
+Cache Pollution and Thrashing," Proceedings of the 21st ACM
+International Conference on Parallel Architectures and Compilation
+Techniques (PACT), Minneapolis, MN, September 2012.
+
 
 2. Simulator Model
 ------------------
