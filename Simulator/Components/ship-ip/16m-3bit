@@ -1,0 +1,7 @@
+size 16384
+block-size 64
+associativity 32
+policy drrip
+tag-store-latency 14
+data-store-latency 35
+shct-max 7

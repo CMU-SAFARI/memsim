@@ -1,0 +1,7 @@
+1;2790;0csize 512
+block-size 64
+associativity 16
+policy srrip
+policy-val 0
+tag-store-latency 4
+data-store-latency 11

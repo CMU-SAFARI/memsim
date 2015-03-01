@@ -1,0 +1,9 @@
+component mshr l1-mshr
+component cache l2
+component mshr l2-mshr
+component stream-prefetcher prefetcher
+component fdp-ap llc
+component mshr llc-mshr
+component stall mc
+
+0 l1-mshr l2 l2-mshr prefetcher llc llc-mshr mc

@@ -1,0 +1,8 @@
+size 524288
+block-size 64
+range-size 1024
+associativity 0
+data-to-tag 1
+tag-store-latency 5
+data-store-latency 10
+policy generation

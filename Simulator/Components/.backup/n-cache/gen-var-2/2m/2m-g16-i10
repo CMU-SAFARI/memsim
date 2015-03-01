@@ -1,0 +1,10 @@
+size 2097152
+block-size 64
+associativity 16
+tag-data-ratio 2
+policy lru
+num-generations 16
+insert-at-generation 10
+tag-store-latency 8
+data-store-latency 20
+generation-variant 2

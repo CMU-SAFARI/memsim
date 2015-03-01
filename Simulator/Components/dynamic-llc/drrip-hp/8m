@@ -1,0 +1,8 @@
+size 8192
+block-size 64
+associativity 16
+policy drrip-hp
+tag-store-latency 12
+data-store-latency 30
+num-dueling-sets 32
+max-psel-value 1024

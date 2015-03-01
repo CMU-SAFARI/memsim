@@ -1,0 +1,98 @@
+                    Memory Simulator (mem-sim)
+                    ==========================
+                                 
+Author: Vivek Seshadri
+Affiliation: Carnegie Mellon University
+
+1. Brief Overview
+-----------------
+
+mem-sim is a fast and flexible memory subsystem simulator. The
+goal of the simulator was to enable ease of simulating many
+different memory system configurations (primarily the cache). The
+simulator only models the back-end and can be attached to any
+front-end CPU model. In this code base, we have a simple
+trace-based front-end Out-of-Order CPU model.
+
+
+2. Simulator Model
+------------------
+
+The simulator models a memory subsystem as a collection of
+components. For example, in a three-level cache hierarchy, the L1
+cache of a core is a component; the shared L3 cache is another
+component. The configuration is then described as a connection
+between these components. Each core in the system has an input
+component --- the component that talks directly to the core. When
+the front-end generates a memory request, it is sent to the input
+component. Each component has two operations: 1) processing a
+forward request from the CPU and 2) processing the return request
+from the downstream components.
+
+When a request is received from the CPU side, the first operation
+is invoked. This operation can either mark the request as
+serviced. If yes, the request is sent back to the CPU or the
+previous component. If not, the request in sent to the next
+component in the hierarchy. If there is no next component, the
+request is marked as served by default.
+
+Once a request is marked as served, it is sent to the previous
+component by invoking the second operation of the previous
+component.
+
+Both the forward and the return operation can optionally add a
+latency to each request. The accumulated return latency to the
+core is used to determine how long the CPU stalls.
+
+For a cache component, the forward operation is a cache lookup
+that determines if the request is a hit or miss and the return
+operation is a cache fill that inserts the block into the cache.
+
+The following figure shows a memory system with two cores and five
+components.
+
+      Core 1 ---> L1-1 ---> L2-1
+                                \
+                                |---> L3
+                                /
+      Core 2 ---> L1-2 ---> L2-2
+
+
+Each core has it's own private L1 and L2 cache and the both the L2
+caches are connected to a shared L3 cache. Since the L3 cache has
+no next component, all requests to the L3 cache will be marked as
+served --- modeling a perfect L3.
+
+Each core has a specific path in this memory subsystem graph. This
+path is used to determine the next/previous components for each
+request, based on the core that generated the request.
+
+
+3. Compiling and Running the Simulator
+--------------------------------------
+
+To compile the simulator, simply run make from the Simulator
+folder.
+
+mem-sim/Simulator> make
+
+To run the simulator, we need two files: a simulator definition
+file within the folder "mem-sim/Simulator/Definitions" (say
+def-file) and a configuration (describing the parameter file for
+each component in the simulator) inside the folder
+"mem-sim/Simulator/Configs/def-file" (say conf-file).
+
+To run the simulator, simply run the run_simulator.py script from
+the scripts folder.
+
+mem-sim> ./Simulator/Scripts/run_simulator.py --definition
+def-file --configuration conf-file  --folder <result-folder>
+--workload <workload-name> <other-simulation-parameters>
+
+You can run multiple configurations simultaneously by using wild
+cards. The results are stored in the folder
+"<result-folder>/def-file/conf-file/<workload-name>". Results can
+be parsed using the parse_results.py file in the Scripts
+directory.
+
+

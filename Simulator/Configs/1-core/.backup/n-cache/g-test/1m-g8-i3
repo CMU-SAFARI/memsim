@@ -1,0 +1,6 @@
+l1-mshr 32-64b
+l2 256k64b8wayLRU
+l2-mshr 32-64b
+llc g-test/1m-g8-i3
+llc-mshr inf-64b
+mc normal

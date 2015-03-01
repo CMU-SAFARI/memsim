@@ -1,0 +1,8 @@
+size 32768
+block-size 64
+associativity 2
+policy lru
+tag-store-latency 1
+data-store-latency 1
+virtual-tag 1
+serial-lookup 0

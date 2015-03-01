@@ -1,0 +1,4 @@
+l1-mshr 32-64b
+llc 512k64b1kf1Gen
+llc-mshr inf-64b
+mc normal

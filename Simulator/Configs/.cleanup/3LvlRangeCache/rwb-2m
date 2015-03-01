@@ -1,0 +1,6 @@
+l1-mshr 32-64b
+l2 256k64b8wayLRU
+l2-mshr 32-64b
+llc 2m64b1kf1Gen
+llc-mshr inf-64b
+mc reduced-wb

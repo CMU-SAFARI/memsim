@@ -1,0 +1,9 @@
+size 1024
+block-size 64
+associativity 16
+policy drrip
+tag-store-latency 6
+data-store-latency 15
+num-history-sets 16
+max-set-length 8192
+bimodal-stop 2

@@ -1,0 +1,6 @@
+size 16384
+block-size 64
+associativity 32
+policy dip
+tag-store-latency 14
+data-store-latency 35

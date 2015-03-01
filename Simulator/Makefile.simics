@@ -1,0 +1,17 @@
+# Classes
+MODULE_CLASSES = Simulator
+
+MAIN_SRCS = 
+MEM_COMPONENTS = 
+COMMON_FILES = ComponentList.cc
+SIMICS_FILES = SimicsModule.cc
+
+CXXFLAGS = -DSIMICS_SIMULATOR -lz
+CFLAGS = -DSIMICS_SIMULATOR -lz
+
+
+# Source files
+SRC_FILES = $(MAIN_SRCS) $(MEM_COMPONENTS) $(COMMON_FILES) $(SIMICS_FILES)
+
+# Include simics makefile
+include $(MODULE_MAKEFILE)

@@ -1,0 +1,8 @@
+component mshr l1-mshr
+component cache l2
+component mshr l2-mshr
+component range-cache llc
+component mshr llc-mshr
+component simple-mc mc
+
+all l1-mshr l2 l2-mshr llc llc-mshr mc

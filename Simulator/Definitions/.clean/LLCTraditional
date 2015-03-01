@@ -1,0 +1,6 @@
+component mshr l1-mshr
+component cache llc
+component mshr llc-mshr
+component simple-mc mc
+
+all l1-mshr llc llc-mshr mc

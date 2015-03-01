@@ -1,0 +1,6 @@
+size 2048
+block-size 64
+associativity 16
+policy srrip
+tag-store-latency 8
+data-store-latency 20

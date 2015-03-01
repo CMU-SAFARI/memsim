@@ -1,0 +1,13 @@
+component mshr l1-mshr-1
+component cache l2-1
+component mshr l2-mshr-1
+component mshr l1-mshr-2
+component cache l2-2
+component mshr l2-mshr-2
+component llc-pref llc
+component mshr llc-mshr
+component stall mc
+
+0 l1-mshr-1 l2-1 l2-mshr-1
+1 l1-mshr-2 l2-2 l2-mshr-2
+all llc llc-mshr mc

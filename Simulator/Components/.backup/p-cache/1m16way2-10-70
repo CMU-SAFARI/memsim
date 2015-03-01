@@ -1,0 +1,9 @@
+size 1048576
+block-size 64
+associativity 16
+tag-data-ratio 2
+policy generation
+tag-store-latency 6
+data-store-latency 15
+partition-fraction 0.10
+conserve-fraction 0.70

@@ -1,0 +1,5 @@
+size 4096
+block-size 64
+associativity 32
+tag-store-latency 10
+data-store-latency 25

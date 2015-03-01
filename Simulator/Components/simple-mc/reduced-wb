@@ -1,0 +1,8 @@
+num-banks 8
+row-size 8192
+row-hit-latency 168
+row-conflict-latency 408
+read-to-write-latency 12
+write-to-read-latency 36
+bus-processor-ratio 4
+num-write-buffer-entries 16

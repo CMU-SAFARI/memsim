@@ -1,0 +1,8 @@
+size 2097152
+block-size 64
+associativity 16
+num-sets 4096
+policy lru
+data-policy reuse
+tag-store-latency 8
+data-store-latency 20

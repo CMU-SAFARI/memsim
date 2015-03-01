@@ -1,0 +1,10 @@
+l1-mshr-1 32-64b
+l2-1 256k64b8wayLRU
+l2-mshr-1 32-64b
+l1-mshr-2 32-64b
+l2-2 256k64b8wayLRU
+l2-mshr-2 32-64b
+llc lru/2m
+llc-mshr inf-64b
+override mc stall-count 300
+override mc cmp-stall-count 75
