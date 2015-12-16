@@ -194,7 +194,7 @@ public:
 
   TableEntry entry_at_location(uint32 setindex, uint32 slotindex) {
     assert(_sets != NULL);
-    return _sets[setindex].entry_at_location(slotindex);
+    return _sets[setindex].entry_at_index(slotindex);
   }
 
 

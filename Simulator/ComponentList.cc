@@ -33,6 +33,9 @@
 #include "CmpFDPAP.h"
 #include "CmpFDP.h"
 
+// DBI
+#include "CmpLLCwAWB.h"
+
 // DRAMSim
 #include "CmpDRAMCtlr.h"
 
@@ -77,6 +80,9 @@ MemoryComponent *CreateComponent(string type) {
     COMPONENT("pacman", CmpPACMan)
     COMPONENT("fdp-ap", CmpFDPAP)
     COMPONENT("fdp", CmpFDP)
+
+    // DBI
+    COMPONENT("dbi", CmpLLCwAWB)
 
     // DRAMSim
     COMPONENT("dram-ctlr", CmpDRAMCtlr)

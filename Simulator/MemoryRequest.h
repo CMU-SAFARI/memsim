@@ -78,6 +78,8 @@ struct MemoryRequest {
   // in the current component
   bool stalling;
 
+  bool teEviction;
+
   // DRAM IDs
   addr_t dramChannelID;
   addr_t dramRankID;
