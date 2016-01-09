@@ -8,7 +8,7 @@ Affiliation: Carnegie Mellon University
 -----------------
 
 mem-sim is a fast and flexible memory subsystem simulator. The
-goal of the simulator was to enable ease of simulating many
+goal of the simulator is to enable ease of simulating many
 different memory system configurations (primarily the cache). The
 simulator only models the back-end and can be attached to any
 front-end CPU model. In this code base, we have a simple
